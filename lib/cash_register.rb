@@ -11,7 +11,7 @@ class CashRegister
     end
 
     def add_item(item, price, num)
-        num != nil ? @total += price.to_f*num : @total += price.to_f
+        @total.to_f += price*num
     end
 
     def apply_discount
