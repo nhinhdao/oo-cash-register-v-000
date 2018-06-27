@@ -12,7 +12,7 @@ class CashRegister
 
     def add_item(item, price, num = 1)
         @total += price*num
-        @total = (@total*@discount(1-@discount.to_f/100)).to_int
+        @total = @total*@discount(1-@discount.to_f/100))
     end
 
     def apply_discount
