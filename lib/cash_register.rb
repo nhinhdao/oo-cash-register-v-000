@@ -13,13 +13,12 @@ class CashRegister
 
     def add_item(item, price, num = 1)
         @total += price*num - @discount
-        # @total = @total - @discount
     end
 
     def apply_discount
         # binding.pry
         @total = (@total*(1-@discount/100.0)).to_i
-        "After the discount, the total comes to $#{@total}."
+        @total > 0 ? "After the discount, the total comes to $#{@total}." : "There is no discount to apply."
     end
 
     def items
